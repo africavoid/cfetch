@@ -31,8 +31,6 @@
 char *part, *string;
 char read[1024];
 
-int uptime[3];
-
 FILE *pipe, *art;
 
 
