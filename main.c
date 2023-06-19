@@ -30,7 +30,7 @@ char *cmds[7] =
 	"uname -o",
 	"echo $SHELL",
 	"uname -r",
-	"uptime |awk '{print $3}'",
+	"uptime |awk '{print $3 $4}'",
 	"free | grep Mem | awk '{print $2}'",	
 };
 #endif
