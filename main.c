@@ -12,12 +12,12 @@
 #ifdef __OpenBSD__
 char *cmds[7] = 
 {
-	"uname -nmi",
-	"uname -p",
-	"uname -o",
+	"uname -nm",
+	"sysctl -n hw.model",
+	"uname -sr",
 	"echo $SHELL",
-	"uname -r",
-	"uptime |awk '{print $3}'",
+	"uname -v",
+	"uptime |awk '{print $3 $4}'",
 	"sysctl -n hw.physmem",	
 };
 #endif
