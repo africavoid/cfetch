@@ -1,16 +1,14 @@
 CC=cc
 CFLAGS= -Wno-implicit-function-declaration
+PREFIX ?= /usr/local
 
-all: final
-
-final: main.o
-	${CC} ${CFLAGS} main.o -o cof
-main.o: main.c 
-	${CC} ${CFLAGS} -c main.c
+all: 
+	${CC} ${CFLAGS} -c main.c -o cof
 
 clean:
-	rm main.o
+	rm cof
 
 install: all 
-	cp -f cof /usr/local/bin/cof
-	chmod 755 /usr/local/bin/cof
+	mkdir -p ${PREFIX}/bin
+	cp -f cof ${PREFIX}/bin/cof
+	chmod 755 ${PREFIX}/bin/cof
