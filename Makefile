@@ -3,12 +3,12 @@ CFLAGS= -Wno-implicit-function-declaration
 PREFIX ?= /usr/local
 
 all: 
-	${CC} ${CFLAGS} -c main.c -o cof
+	${CC} ${CFLAGS} main.c -o cof
 
 clean:
 	rm cof
 
-install: all 
+install: all
 	mkdir -p ${PREFIX}/bin
 	cp -f cof ${PREFIX}/bin/cof
 	chmod 755 ${PREFIX}/bin/cof
