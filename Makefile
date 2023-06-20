@@ -6,9 +6,9 @@ all:
 	${CC} ${CFLAGS} main.c -o cof
 
 clean:
-	rm cof
+	rm -f cof
 
 install: all
-	mkdir -p ${PREFIX}/bin
-	cp -f cof ${PREFIX}/bin/cof
-	chmod 755 ${PREFIX}/bin/cof
+	mkdir -p ${DESTDIR}${PREFIX}/bin
+	cp -f cof ${DESTDIR}${PREFIX}/bin/cof
+	chmod 755 ${DESTDIR}${PREFIX}/bin/cof
